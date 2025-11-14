@@ -80,9 +80,9 @@ function DeleteProductFromBasket(){
     let stringOfAllProductOfBasket = Basket.arrayProducts.join(", ");
     let n = false;
     while (!n) {
-        let deleteProduct = prompt(`Какой товар вы хотите удалить из корзины? Доступный товар из корзины: ${stringOfAllProductOfBasket}`);
-        if (Basket.arrayProducts.includes(deleteProduct)) {
-            let indexProduct = Basket.arrayProducts.indexOf(deleteProduct);
+        let productOfDelete = prompt(`Какой товар вы хотите удалить из корзины? Доступный товар из корзины: ${stringOfAllProductOfBasket}`);
+        if (Basket.arrayProducts.includes(productOfDelete)) {
+            let indexProduct = Basket.arrayProducts.indexOf(productOfDelete);
             if (Basket.countOfProduct[indexProduct] > 1){
                 Basket.countOfProduct[indexProduct]--; 
             } else {
@@ -96,7 +96,7 @@ function DeleteProductFromBasket(){
             alert("Вы ввели товар не из корзины! Попоробуйте снова");
         }
     }
-    
+    console.log("Add str");
 }
 
 function FinallyCostOfBasket(){
