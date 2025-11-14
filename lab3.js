@@ -96,7 +96,7 @@ function DeleteProductFromBasket(){
             alert("Вы ввели товар не из корзины! Попоробуйте снова");
         }
     }
-    
+    console.log("Add str");
 }
 
 function FinallyCostOfBasket(){
